@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Alex Dai]]></title>
+  <link href="http://re757575.github.io/atom.xml" rel="self"/>
+  <link href="http://re757575.github.io/"/>
+  <updated>2015-09-10T11:11:31+08:00</updated>
+  <id>http://re757575.github.io/</id>
+  <author>
+    <name><![CDATA[Alex.Dai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown Preview Crashed]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/09/markdown-preview-this-view-has-crashed/"/>
+    <updated>2015-09-09T17:42:21+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/09/markdown-preview-this-view-has-crashed</id>
+    <content type="html"><![CDATA[<h4>Windows 10 Markdown LivePreview This view has crashed</h4>
+
+<p><a href="http://markdownpad.com/faq.html#livepreview-directx">http://markdownpad.com/faq.html#livepreview-directx</a></p>
+
+<h4>Install <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a></h4>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grunt Install Plugin]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/08/grunt-install-plugin/"/>
+    <updated>2015-09-08T12:05:58+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/08/grunt-install-plugin</id>
+    <content type="html"><![CDATA[<h2>安裝 contrib-concat 套件</h2>
+
+<h3>1.Insatll Plugin</h3>
+
+<p><a href="https://www.npmjs.com/package/grunt-contrib-concat">contrib-concat</a> 的功能是用來合併檔案</p>
+
+<pre><code>$ npm install grunt-contrib-concat --save-dev
+</code></pre>
+
+<h3>2.Init Config</h3>
+
+<pre><code>#Gruntfile.js
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    concat: {
+      options: {
+        // separator: ';',
+      },
+      dist: { // dist 可以是任何值
+        src: ['js/1.js', 'js/2.js'],
+        dest: 'build/script.js',
+      },
+    },
+  });
+  grunt.loadNpmTasks('grunt-contrib-concat');
+
+};
+</code></pre>
+
+<h6>執行前 目錄結構</h6>
+
+<pre><code> ├── grunt
+ ├── js
+ │   ├── 1.js
+ │   └── 2.js
+ ├── node_modules
+ │   └── *...
+ ├── Gruntfile.js
+ ├── package.json
+</code></pre>
+
+<h3>3.Run</h3>
+
+<pre><code>$ grunt concat
+</code></pre>
+
+<h3>4.Result</h3>
+
+<p>執行後會產生 build 目錄且底下有一個 script.js(1.js與2.js合併)</p>
+
+<h6>執行後 目錄結構</h6>
+
+<pre><code> ├── grunt
+ ├── build
+ │   └── script.js
+ ├── js
+ │   ├── 1.js
+ │   └── 2.js
+ ├── node_modules
+ │   └── *...
+ ├── Gruntfile.js
+ ├── package.json
+</code></pre>
+
+<h3>5.Modify</h3>
+
+<p>再加上css</p>
+
+<pre><code>grunt.initConfig({
+  concat: {
+    js: {
+      src: ['js/1.js', 'js/2.js'],
+      dest: 'build/script.js',
+    },
+    css: {
+      src: ['css/main.css', 'css/theme.css'],
+      dest: 'build/style.css',
+    },
+  },
+});
+</code></pre>
+
+<h6>執行前 目錄結構</h6>
+
+<pre><code>├── grunt
+├── js
+│   ├── 1.js
+│   └── 2.js
+├── css
+│   ├── main.css
+│   └── theme.css
+├── node_modules
+│   └── *...
+├── Gruntfile.js
+├── package.json
+</code></pre>
+
+<h3>6.Run Again</h3>
+
+<pre><code>$ grunt concat
+</code></pre>
+
+<h6>執行後 目錄結構</h6>
+
+<pre><code>├── grunt
+├── build
+│   ├── script.js
+│   └── style.css
+├── js
+│   ├── 1.js
+│   └── 2.js
+├── css
+│   ├── main.css
+│   └── theme.css
+├── node_modules
+│   └── *...
+├── Gruntfile.js
+├── package.json
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grunt Install]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/04/grunt-install/"/>
+    <updated>2015-09-04T08:38:59+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/04/grunt-install</id>
+    <content type="html"><![CDATA[<h5>注意: 必須先安裝 <a href="https://nodejs.org/en/">Node.js</a> (建議使用 <a href="https://github.com/creationix/nvm" title="Node Version Manager">nvm</a> 安裝)</h5>
+
+<h2>1.安裝</h2>
+
+<pre><code># 首先安裝 grunt cli 套件
+$ npm install -g grunt-cli
+
+# 專案下執行
+$ npm inint
+$ npm intall -S grunt
+
+目錄下會產生 node_modules 資料夾 與 package.json
+</code></pre>
+
+<h2>2.產生 Gruntfile.js</h2>
+
+<pre><code>$ touch Gruntfile.js
+</code></pre>
+
+<h2>3.建立 Task</h2>
+
+<pre><code>/**
+ * Gruntfile.js
+ */
+module.exports = function(grunt) {
+// $ grunt speak
+grunt.registerTask('speak', function(){
+    console.log("I'm Speaking");
+});
+
+// $ grunt yell
+grunt.registerTask('yell', function(){
+    console.log("I'm YELLING");
+});
+
+// $ grunt both
+grunt.registerTask('both', ['speak', 'yell']);
+
+// $ grunt
+grunt.registerTask('default', ['speak', 'yell']);
+
+};
+</code></pre>
+
+<h2>4.執行 Task</h2>
+
+<pre><code>$ grunt speak
+$ grunt yell
+$ grunt both
+$ grunt
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Javascript Htmlspecialchar]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/03/javascript-htmlspecialchar/"/>
+    <updated>2015-09-03T16:01:49+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/03/javascript-htmlspecialchar</id>
+    <content type="html"><![CDATA[<pre><code>var _htmlspecialchars_decode = function (html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+};
+
+var _htmlspecialchars_encode = function (text) {
+  var map = {
+    '&amp;': '&amp;amp;',
+    '&lt;': '&amp;lt;',
+    '&gt;': '&amp;gt;',
+    '"': '&amp;quot;',
+    "'": '&amp;#039;'
+  };
+  return text.replace(/[&amp;&lt;&gt;"']/g, function(m) { return map[m]; });
+};
+</code></pre>
+
+<p>來源: <a href="http://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript">http://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/02/first-post/"/>
+    <updated>2015-09-02T12:52:46+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/02/first-post</id>
+    <content type="html"><![CDATA[<p><a href="http://octopress.org/">A blogging framework for hackers.</a></p>
+]]></content>
+  </entry>
+  
+</feed>
