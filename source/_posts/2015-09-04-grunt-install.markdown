@@ -13,7 +13,7 @@ categories: grunt
 	$ npm install -g grunt-cli
 
 	# 專案下執行
-	$ npm inint
+	$ npm init
 	$ npm intall -S grunt
 
 	目錄下會產生 node_modules 資料夾 與 package.json
