@@ -4,7 +4,7 @@
   <title><![CDATA[Alex Dai]]></title>
   <link href="http://re757575.github.io/atom.xml" rel="self"/>
   <link href="http://re757575.github.io/"/>
-  <updated>2015-09-10T11:11:31+08:00</updated>
+  <updated>2015-09-15T14:27:30+08:00</updated>
   <id>http://re757575.github.io/</id>
   <author>
     <name><![CDATA[Alex.Dai]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gulp Install]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/15/gulp-install/"/>
+    <updated>2015-09-15T13:53:18+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/15/gulp-install</id>
+    <content type="html"><![CDATA[<h2>1.安裝</h2>
+
+<p> <h6>gulp 安裝與建立都與 grunt 相似</h6></p>
+
+<p>  # 專案下執行</p>
+
+<p>  產生 package.json</p>
+
+<p>  <code>$ npm init</code></p>
+
+<p>  安裝非全域的 gulp 套件並更新 package.json</p>
+
+<p>  <code>$ npm install gulp --save-dev</code></p>
+
+<h2>2.產生 gulpfile.js</h2>
+
+<p>  <code>$ touch gulpfile.js</code></p>
+
+<h2>3.建立 Task</h2>
+
+<pre><code>/**
+ * gulpfile.js
+ */
+gulp.task('speak', function() {
+  console.log('I'm Speaking');
+});
+
+gulp.task('yell', function() {
+  console.log('I'm YELLING');
+});
+
+grunt.task('both', ['speak', 'yell']);
+
+gulp.task('default', ['speak', 'yell']);
+</code></pre>
+
+<h2>4.執行 Task</h2>
+
+<pre><code>$ gulp speak
+$ gulp yell
+$ gulp both
+$ gulp
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Markdown Preview Crashed]]></title>
@@ -167,7 +218,7 @@ module.exports = function(grunt) {
 $ npm install -g grunt-cli
 
 # 專案下執行
-$ npm inint
+$ npm init
 $ npm intall -S grunt
 
 目錄下會產生 node_modules 資料夾 與 package.json

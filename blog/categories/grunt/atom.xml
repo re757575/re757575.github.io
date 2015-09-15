@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Grunt | Alex Dai]]></title>
   <link href="http://re757575.github.io/blog/categories/grunt/atom.xml" rel="self"/>
   <link href="http://re757575.github.io/"/>
-  <updated>2015-09-10T11:11:31+08:00</updated>
+  <updated>2015-09-15T14:27:30+08:00</updated>
   <id>http://re757575.github.io/</id>
   <author>
     <name><![CDATA[Alex.Dai]]></name>
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
 $ npm install -g grunt-cli
 
 # 專案下執行
-$ npm inint
+$ npm init
 $ npm intall -S grunt
 
 目錄下會產生 node_modules 資料夾 與 package.json

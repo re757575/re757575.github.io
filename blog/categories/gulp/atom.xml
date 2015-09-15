@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gulp | Alex Dai]]></title>
+  <link href="http://re757575.github.io/blog/categories/gulp/atom.xml" rel="self"/>
+  <link href="http://re757575.github.io/"/>
+  <updated>2015-09-15T14:27:30+08:00</updated>
+  <id>http://re757575.github.io/</id>
+  <author>
+    <name><![CDATA[Alex.Dai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gulp Install]]></title>
+    <link href="http://re757575.github.io/blog/2015/09/15/gulp-install/"/>
+    <updated>2015-09-15T13:53:18+08:00</updated>
+    <id>http://re757575.github.io/blog/2015/09/15/gulp-install</id>
+    <content type="html"><![CDATA[<h2>1.安裝</h2>
+
+<p> <h6>gulp 安裝與建立都與 grunt 相似</h6></p>
+
+<p>  # 專案下執行</p>
+
+<p>  產生 package.json</p>
+
+<p>  <code>$ npm init</code></p>
+
+<p>  安裝非全域的 gulp 套件並更新 package.json</p>
+
+<p>  <code>$ npm install gulp --save-dev</code></p>
+
+<h2>2.產生 gulpfile.js</h2>
+
+<p>  <code>$ touch gulpfile.js</code></p>
+
+<h2>3.建立 Task</h2>
+
+<pre><code>/**
+ * gulpfile.js
+ */
+gulp.task('speak', function() {
+  console.log('I'm Speaking');
+});
+
+gulp.task('yell', function() {
+  console.log('I'm YELLING');
+});
+
+grunt.task('both', ['speak', 'yell']);
+
+gulp.task('default', ['speak', 'yell']);
+</code></pre>
+
+<h2>4.執行 Task</h2>
+
+<pre><code>$ gulp speak
+$ gulp yell
+$ gulp both
+$ gulp
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
