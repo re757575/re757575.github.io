@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gulp | Alex Dai]]></title>
   <link href="http://re757575.github.io/blog/categories/gulp/atom.xml" rel="self"/>
   <link href="http://re757575.github.io/"/>
-  <updated>2015-09-15T14:27:30+08:00</updated>
+  <updated>2015-09-15T14:31:29+08:00</updated>
   <id>http://re757575.github.io/</id>
   <author>
     <name><![CDATA[Alex.Dai]]></name>
@@ -22,19 +22,22 @@
 
 <p> <h6>gulp 安裝與建立都與 grunt 相似</h6></p>
 
-<p>  # 專案下執行</p>
+<h4>專案下執行</h4>
 
-<p>  產生 package.json</p>
+<p>產生 package.json</p>
 
-<p>  <code>$ npm init</code></p>
+<pre><code>$ npm init
+</code></pre>
 
 <p>  安裝非全域的 gulp 套件並更新 package.json</p>
 
-<p>  <code>$ npm install gulp --save-dev</code></p>
+<pre><code>$ npm install gulp --save-dev
+</code></pre>
 
 <h2>2.產生 gulpfile.js</h2>
 
-<p>  <code>$ touch gulpfile.js</code></p>
+<pre><code>$ touch gulpfile.js
+</code></pre>
 
 <h2>3.建立 Task</h2>
 
