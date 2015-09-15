@@ -9,18 +9,16 @@ categories: gulp
 
  <h6>gulp 安裝與建立都與 grunt 相似</h6>
 
-  # 專案下執行
+#### 專案下執行
+產生 package.json
 
-  產生 package.json
-
-  `$ npm init`
-
+    $ npm init
   安裝非全域的 gulp 套件並更新 package.json
 
-  `$ npm install gulp --save-dev`
+    $ npm install gulp --save-dev
 
 ##2.產生 gulpfile.js
-  `$ touch gulpfile.js`
+    $ touch gulpfile.js
 
 ##3.建立 Task
     /**
